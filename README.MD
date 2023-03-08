@@ -1,4 +1,4 @@
-# tutorial
+# [Jinjat](https://jinj.at) Refine Integration
 
 <div align="center" style="margin: 30px;">
     <a href="https://refine.dev">
@@ -7,13 +7,9 @@
 </div>
 <br/>
 
-This [refine](https://github.com/pankod/refine) project was generated with [superplate](https://github.com/pankod/refine).
+This [refine](https://github.com/pankod/refine) project was generated with [superplate](https://github.com/pankod/refine). It has additional files to read metadata from Jinjat API and generate the pages automatically with [JsonForms](https://jsonforms.io/).
 
 ## Getting Started
-
-**refine** is a React-based framework for building data-intensive applications in no time ✨
-
-Refine offers lots of out-of-the box functionality for rapid development, without compromising extreme customizability. Use-cases include, but are not limited to admin panels, B2B applications and dashboards.
 
 ## Available Scripts
 
