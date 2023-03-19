@@ -1,1 +1,21 @@
+name: Deploy build to gh-branch
 
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish_maven:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.6.0
+      - name: Build project
+        run: npm run build
+      - uses: seanmiddleditch/gha-publish-to-git@master
+        with:
+          branch: gh-pages
+          github_token: '${{ secrets.GITHUB_TOKEN  }}'
+          github_pat: '${{ secrets.GH_PAT }}'
+          source_folder: build/  
