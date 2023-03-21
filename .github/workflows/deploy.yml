@@ -21,9 +21,8 @@ jobs:
       - name: Rebuild the build/ directory
         run: CI=false && npm run build
         
-      - uses: seanmiddleditch/gha-publish-to-git@master
+      - uses: sterlingwes/gh-pages-deploy-action@v1.1
         with:
-          branch: gh-pages
-          github_token: '${{ secrets.GITHUB_TOKEN  }}'
-          github_pat: '${{ secrets.GH_PAT }}'
-          source_folder: build/  
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          source-directory: build
+          build-command: npm run build
