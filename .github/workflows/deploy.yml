@@ -23,5 +23,5 @@ jobs:
         
       - uses: jinjat-data/gh-pages-deploy-action@1.0
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+          access-token: ${{ secrets.ACCESS_TOKEN }}
           source-directory: build
