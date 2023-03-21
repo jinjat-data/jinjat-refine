@@ -17,9 +17,11 @@ jobs:
         
       - name: Install dependencies
         run: npm install
+    
+      - name: Rebuild the build/ directory
+        run: CI=false && npm run build
         
-      - uses: sterlingwes/gh-pages-deploy-action@v1.1
+      - uses: jinjat-data/gh-pages-deploy-action@v1.0
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           source-directory: build
-          build-command: CI=false && npm run build
