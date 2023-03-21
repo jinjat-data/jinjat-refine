@@ -21,7 +21,7 @@ jobs:
       - name: Rebuild the build/ directory
         run: CI=false && npm run build
         
-      - uses: jinjat-data/gh-pages-deploy-action@1.0
+      - uses: jinjat-data/gh-pages-deploy-action@1.1
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           source-directory: build
