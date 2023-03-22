@@ -21,7 +21,8 @@ jobs:
       - name: Rebuild the build/ directory
         run: CI=false && npm run build
         
-      - uses: jinjat-data/gh-pages-deploy-action@1.2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          source-directory: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
